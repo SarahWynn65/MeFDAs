@@ -406,8 +406,8 @@ section {
     position: relative;
     bottom: 21rem;
     left: 3rem; */
-
-    width:12rem;
+width: 80%;
+    /* width:12rem; */
     height:auto;
     /* box-shadow: 0.5rem 0.5rem var(--darkIconColor); */
     /* margin-right: 2rem;
@@ -1101,6 +1101,9 @@ background: red;
 
 /* @media only screen and (max-width: 489px) { */
     @media only screen and (max-width: 845px) {
+    html {
+        font-size:smaller;
+    }
     header {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -1150,7 +1153,12 @@ background: red;
         font-size: small;
     }
     .idCard {
-        margin: 0;
+        /* margin: 0;
+        max-width: 90%; */
+        margin: 0 auto;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
     }
     .idSideBar {
         padding: 0;
