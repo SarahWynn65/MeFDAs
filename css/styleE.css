@@ -1,0 +1,383 @@
+html{
+
+    --lightFontColor: #ADD8E6;
+    --darkFontColor: #00008B;
+    --fontFamily: "Poiret One";
+    --headerFontFamily: "Montserrat Alternates";
+
+    --sideBarWidth: 10vw;
+    --headerHeight:  175px;
+    
+}
+header{
+    background-image: url(../images/ChatGPT\ blurred\ blue\ medical\ background.png);
+    background-size:cover;
+    background-position: bottom;
+
+    display:flex;
+    flex-direction: column;
+
+    position: fixed;
+    width: 100%;
+    height: var(--headerHeight);
+    top:0;
+
+    border-bottom: 3px solid darkblue;
+
+    z-index: 2;
+
+    box-sizing: border-box;
+
+}
+header div{
+    display:flex;
+    flex-direction:row;
+    margin:auto;
+}
+header img{
+    height: 100px;
+    margin:auto;
+}
+h1{
+    font-size: 3rem;
+    padding-top: 30px;
+    font-family: var(--headerFontFamily);
+}
+.titleLightBlue{
+    color:var(--lightFontColor);
+}
+.titleDarkBlue{
+    color: var(--darkFontColor);
+}
+nav{
+    margin: auto;
+    padding-bottom: 20px;
+}
+nav a{
+    color: var(--darkFontColor);
+    font-size: 1.5rem;
+    text-decoration: underline;
+    padding: 25px;
+    font-family: var(--fontFamily);
+}
+
+            /* ============================== */
+            /* ========== Home Page ========= */
+            /* ============================== */
+
+
+#homeMain{
+    display:flex;
+    /* flex-direction: row; */
+    align-items: stretch;
+}
+#homeColOne{
+    /* width: calc(100vw - var(--sideBarWidth)); */
+    padding-top: var(--headerHeight);
+    flex:1;
+}
+#homeSectionOne{
+    background-image: url(../images/MeFDAs_girlInOfficeFlippedBlueGreenFIlter.png);
+    background-size:cover;
+    background-position:center 25%;
+
+    display:flex;
+    justify-content: end;
+    
+}
+#TJIntroDiv{
+    width: 50%;
+}
+#TJIntroDiv p{
+    width:75%;
+    margin: auto;
+    color: var(--darkFontColor);
+    padding: 10px;
+    font-family: var(--fontFamily);
+    font-size: 1.5rem;
+    margin: 100px 0px;
+    line-height: 2rem;
+
+    background-color: rgba(250, 235, 215, 0.5);
+    border-radius: 12px;
+}
+
+/* ============================== */
+/* Info Section on Home Page */
+/* ============================== */
+
+
+#homeSectionTwo{
+    background-image: url(../images/ChatGPT\ Image\ blurred\ blue\ background.png);
+    background-size:cover;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* #homeSectionTwoColOne{
+    align-content: center;
+} */
+
+#homeSectionTwoColOne h2, h3{
+    color:var(--darkFontColor);
+    font-size: 2rem;
+    padding: 15px;
+    padding-left:60px;
+    font-family: var(--fontFamily);
+    line-height: 1.75rem;
+    font-weight: bolder;
+}
+#homeSectionTwoColOne h2{
+    padding-top: 100px;
+}
+#homeSectionTwoColOne h3{
+    font-size: 1.5rem;
+    padding-left: 100px;
+}
+#homeSectionTwoColOne dl{
+    padding-left: 120px;
+    color:var(--darkFontColor);
+    font-size: 1.5rem;
+    font-family: var(--fontFamily);
+    line-height: 1.75rem;
+
+}
+#homeSectionTwoColOne dt{
+    padding-bottom: 15px;
+    font-weight: bolder;
+}
+#homeSectionTwoColOne dd{
+    padding-left: 130px;
+    padding-bottom: 30px;
+}
+
+/* ======================================== */
+/* Collaborate and Consulting Core Section */
+/* ======================================== */
+
+#consultingCore{
+    
+    color: var(--darkFontColor);
+    font-size: 1.5rem;
+    line-height: 1.75;
+    margin:0px 50px;
+    padding-top: 100px;
+    margin-bottom: 30px;
+    font-family: var(--fontFamily);
+
+}
+#consultingCoreBackground{
+    background-color: rgba(250, 235, 215, 0.5);
+    border-radius: 12px;
+    padding: 30px;
+}
+#consultingCore h2{
+    font-size: 3rem;
+    
+    text-align: center;
+}
+#consultingCore h3{
+    font-size: 1.5rem;
+}
+#consultingCore dl{
+    padding-left: 120px;
+}
+
+/* ============================== */
+/* Achievement Section on Home Page */
+/* ============================== */
+
+
+#achievementSection{
+
+    background-image: url(../images/ChatGPT\ Imageblurred_medical_personnel.png);
+    background-size:cover;
+    /* height: 90vh; */
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+#achievementSection div{
+    width:50%;
+    
+     display: flex;
+  justify-content: center;
+  align-items: center;
+
+    /* text-align: center;
+    box-sizing: border-box; */
+}
+#achievementSection p{
+    width: 25%;
+    background-color: var(--lightFontColor);
+    border-radius: 12px;
+
+    color: var(--darkFontColor);
+    font-size: 2rem;
+    font-family: var(--fontFamily);
+
+    text-align: center;
+
+    padding:50px;
+    margin:50px;
+}
+/* ============================== */
+/* Contact Section on Home Page */
+/* ============================== */
+
+#contactSection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-image:url(../images/ChatGPT\ blurred\ blue\ medical\ background.png);
+    background-size: cover;
+}
+#contactDiv{
+    display: flex;
+    flex-direction: column;
+}
+#contactDiv a{
+    font-size: 2rem;
+    font-family: var(--fontFamily);
+    color: var(--darkFontColor);
+    text-decoration: underline;
+    margin: 30px;
+    text-align: center;
+}
+#contactDiv a:hover{
+    color:purple;
+}
+
+
+#headshotDiv{
+    padding-top: 100px;
+}
+#headshotDiv img{
+    width: 15vw;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+#headshotDiv figcaption{
+    color:var(--darkFontColor);
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 40px;
+    font-family: var(--fontFamily);
+}
+
+/* ============================== */
+/* Client Logo Side Bar on Home Page */
+/* ============================== */
+
+#previousClientList{
+    width:var(--sideBarWidth);
+    /* min-width: 125px; */
+    background-color: whitesmoke;
+    padding-top: var(--headerHeight);
+    border-left: 3px solid darkblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.clientLogo{
+    padding: 15px;
+}
+#previousClientList h1{
+    color:var(--darkFontColor);
+    font-size: 1.5rem;
+    padding: 20px;
+    font-family: var(--fontFamily);
+    text-align: center;
+}
+
+            /* ============================== */
+            /* ====== Solutions Main Page ===== */
+            /* ============================== */
+
+#solutionsMain h1{
+    color: black;
+    font-size: 3rem;
+    padding-top: var(--headerHeight);
+}
+
+            /* ============================== */
+            /* ======== FAQs Main Page ======= */
+            /* ============================== */
+
+#faqsMain h1{
+    color: black;
+    font-size: 3rem;
+    padding-top: var(--headerHeight);
+}
+
+            /* ============================== */
+            /* ============ Footer =========== */
+            /* ============================== */
+
+
+footer{
+
+    background-size:cover;
+    background-position: bottom;
+    border-top: 3px solid darkblue;
+    background: linear-gradient(135deg,white 50%, lightblue);
+    /* background-color: pink; */
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+footer img{
+    height: 100px;
+}
+footer a{
+    margin: 40px;
+    padding-right: 50px;
+}
+
+/* Social media Icons */
+
+ .fa {
+    padding: 12px;
+    margin:.25rem;
+    margin-top: 30px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 25%;
+  }
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* LinkedIn */
+.fa-linkedin {
+    background: #79b4fa;
+} 
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+}
+  
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+} 
+.fa-youtube {
+    font-size:48px;
+    background: red;
+}
+.fa-clipboard {
+    font-size:2rem;
+    color:white;
+}

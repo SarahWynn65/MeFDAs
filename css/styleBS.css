@@ -1,0 +1,315 @@
+html {
+    /* variables */
+    --headerHeight: 7rem;
+    --footerHeight: 3rem;
+    --rhsSideBarWidth: 200px;
+    --hamburgerWidth: 100px;
+
+    --headerFooterZindex: 100;
+    --sideBarZindex: 50;
+
+    --headerFooterBackground: linear-gradient(white, var(--mediumColor3));
+
+    /* --fontFamily: "Roboto Flex"; */
+    /* --fontFamily: "Markazi Text"; */
+    --fontFamily: Mandali;
+
+    background-color: white;
+    font-family: var(--fontFamily);
+
+        /* Blue color scheme */
+        /* background-color: white;
+        --lightestColor1: #d2e1fa;
+        --mediumLightColor2: #accafc;
+        --mediumColor3: #7aaafa;
+        --mediumDarkColor4: #4689fa;
+        --darkColor5: #01348a;
+        --darkestColor6: #00112e; */
+
+        /* Blue-green color scheme */
+        background-color: white;
+        --lightestColor1: #cfe3e4;
+        --mediumLightColor2: #add8e6;
+        --mediumColor3: #93b8b6;
+        --mediumDarkColor4: #749998;
+        --darkColor5: #40615f;
+        --darkestColor6: #233b39;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    position:fixed;
+    top:0;
+    height: var(--headerHeight);
+    width: 100vw;
+    background-image: var(--headerFooterBackground);
+    /* background-image: url(../images/ChatGPT\ blurred\ blue\ medical\ background.png); */
+    background-size:cover;
+    background-position: bottom; 
+    z-index:var(--headerFooterZindex);
+}
+
+/* *************************/
+/* Drop Down Menu in Header*/
+/* *************************/
+
+    
+.dropdown{
+    position: relative;
+    display: inline-block;
+    width: var(--hamburgerWidth);
+}
+
+/* svg is the menu icon */
+header svg{
+    padding: 15px;
+} 
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%; /* position just below the SVG */
+    left: 0;
+    background-color: lightblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+    padding: 12px 16px;
+}
+.dropdown-content a {
+    font-size: 1.5rem;
+    color: darkblue;
+    padding:10px;
+    display: block;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.dropdown-content a:hover{
+    text-decoration: underline;
+}
+
+/* Company Title and Logo in Header */
+#companyBadge{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: calc(100vw - var(--hamburgerWidth));
+}
+
+/* ??? I have set the width to px rather than % to prevent img from changing size */
+#companyBadge img{
+    width: 50px;
+    margin: 20px;
+}
+
+#companyTitle{
+    display: flex;
+    align-items: center;
+}
+
+/* Header Font Styling */
+#companyTitle h1{
+    font-size: 4rem;
+    padding: 15px;
+    font-family: var(--fontFamily);
+}
+.titleColor1{
+    /* color:lightblue; */
+    color: var(--mediumColor3);
+}
+.titleColor2{
+    /* color:darkblue; */
+    color: var(--darkColor5);
+}
+
+/******************************/
+/********* Main Section *******/
+/******************************/
+/* Main section is the wrapper for homeSection, servicesSection, and faqsSection */
+
+#mainSection{
+    display:flex;
+    flex-direction: row;
+    margin-top:var(--headerHeight);
+}
+
+/******************************/
+/********* Home Section *******/
+/******************************/
+
+#homeSection {
+    display: none;
+}
+#homeSection.active {
+    display: flex;
+}
+
+/* #introBackgroundImage{
+    background-image: url(../images/MeFDAs_girlInOfficeFlipped.jpg);
+    background-size: cover;
+    background-position:center;
+    height: 85vh;
+    width:80%;
+
+    position:absolute;
+    filter: blur(5px);
+    z-index: 1;
+}
+.introBackgroundFilter{
+    height: 85vh;
+    width:80%;
+box-sizing: border-box;
+    position:absolute;
+    z-index: 2;
+    background-color: rgba(173, 216, 230, 0.5);
+    padding:1rem;
+} */
+
+
+
+#introDiv{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+
+    width: calc(100vw - var(--rhsSideBarWidth));
+    height: 200vh;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    background-image: url(../images/MeFDAs_girlInOfficeFlippedBlurred.png);
+    background-size: cover;
+    background-position:center;
+
+}
+
+#introDiv p, #introDiv ul{
+    margin:1rem;
+    font-family: var(--fontFamily);
+    font-size: 1.5rem;
+    color:var(--darkestColor6);
+}
+#introDiv li{
+    list-style-image:url('../images/bulletPoint_small.png');
+    list-style-position: inside;
+    padding-bottom: 5px;
+}
+
+/************************/
+/******* Sidebars *******/
+/************************/
+
+.rhsSideBar {
+    width: var(--rhsSideBarWidth);
+    min-height: 100vh;
+    z-index: 2;
+    position: absolute;
+    right:0;
+    padding:20px;
+}
+
+#introSideBar{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: var(--footerHeight);
+    box-sizing: border-box;
+
+    background-color:var(--mediumColor3);
+    color:var(--darkestColor6);
+
+}
+
+#introSideBar div {
+    background-color: white;
+    padding:10px;
+    border:1px solid var(--darkestColor6);
+    box-shadow: 2px 2px 2px grey;
+    margin-top: 15px;
+    margin-bottom:15px;
+}
+
+h6 {
+    text-decoration: underline;
+    margin-bottom:.5rem;
+}
+
+/**********************************/
+/********* Services Section *******/
+/**********************************/
+
+#servicesSection {
+    display: none;
+}
+#servicesSection.active {
+    display: flex;
+}
+
+.customerLogo {
+    width: 70%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3rem;
+}
+
+/******************************/
+/********* FAQs Section *******/
+/******************************/
+
+#faqsSection {
+    display: none;
+}
+#faqsSection.active {
+    display: flex;
+}
+
+/********************************/
+/********* Footer Section *******/
+/********************************/
+
+footer{
+    z-index: 3;
+    position:fixed;
+    bottom:0;
+    width:100vw;
+    background-image: var(--headerFooterBackground);
+}
+     /* Style all font awesome icons */
+ .fa {
+    padding: 12px;
+    margin:.25rem;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 55%;
+  }
+  
+  /* Add a hover effect to all font awesome icons */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* LinkedIn */
+.fa-linkedin {
+    background: #79b4fa;
+} 
+
+/* Facebook */
+.fa-facebook {
+    background: #3B5998;
+}
+  
+/* Twitter */
+.fa-twitter {
+    background: #55ACEE;
+} 
+.fa-youtube {
+    font-size:48px;
+    background: red;
+}
+.fa-clipboard {
+    font-size:2rem;
+    color:white;
+}
