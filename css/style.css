@@ -138,7 +138,7 @@ header {
             box-sizing: border-box;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    padding-right: 15%;
+    padding-right: 14rem;
     padding-left: 14rem;
     border-bottom: 2px solid var(--darkIconColor);
     z-index: 100;
@@ -306,7 +306,8 @@ section {
         justify-content: space-around;
     -ms-flex-wrap:wrap;
         flex-wrap:wrap;
-    background-image: url(../images/ChatGPT\ Imageblurred_medical_personnel.png);
+    /* background-image: url(../images/ChatGPT\ Imageblurred_medical_personnel.png); */
+    background-image: radial-gradient(white, transparent 70%);
     padding: 2rem;
     border-radius: 3%;
     margin-top: 1rem;
@@ -336,6 +337,10 @@ section {
     margin-left: auto;
     margin-right: auto;
 }
+.mediumIcon {
+    display: block;
+    height: 4rem;
+}
 
 .idCard {
     display: -webkit-box;
@@ -348,15 +353,18 @@ section {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-box-shadow: 2px 2px 10px grey;
-            box-shadow: 2px 2px 10px grey;
+    -webkit-box-shadow: 10px 10px 10px grey;
+            box-shadow: 10px 10px 10px grey;
     background-color: white;
-    -webkit-transform: rotate(2deg);
-        -ms-transform: rotate(2deg);
-            transform: rotate(2deg);
+    border: solid gray 2px;
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
+            /* transform: skew(3deg, 2deg); */
     margin:1rem;
 }
 .idSideBar {
+    display:flex;
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
@@ -366,6 +374,12 @@ section {
     color: var(--lightIconColor);
     padding:0.7rem;
     font-size: 2rem;
+}
+.idSideBar p {
+    margin-top:8rem;
+}
+.idSidebar img {
+    margin-top: .5rem;
 }
 .idPersonal {
     display: -webkit-box;
@@ -385,11 +399,12 @@ section {
     padding:.5rem;
 }
 .badgeHole {
-    background-color: var(--lightIconColor);
+    /* background-color: var(--lightIconColor); */
+    background-image: radial-gradient(var(--lightIconColor), grey 90%);
     width: 2rem;
     height: .5rem;
     border-radius: 30%;
-    border: 1px solid gray;
+    border: .5px solid gray;
 }
 
 /* #girlInOfficeBackground {
