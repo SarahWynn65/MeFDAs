@@ -5,6 +5,13 @@
 * Browsers: last 4 version
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* style sheet for MeFDAs May 2025 */
 /* ********************************************** */
 /* ****************** general ******************* */
@@ -128,8 +135,8 @@ header {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     background-color: var(--mainbackgroundColor);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, white), to(var(--lightIconColor)) );
     background-image: -o-linear-gradient(white 20%, var(--lightIconColor) );
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, white), to(var(--lightIconColor)) );
     background-image: linear-gradient(white 20%, var(--lightIconColor) );
 
     position:fixed;
@@ -307,6 +314,7 @@ section {
     -ms-flex-wrap:wrap;
         flex-wrap:wrap;
     /* background-image: url(../images/ChatGPT\ Imageblurred_medical_personnel.png); */
+    background-image: -o-radial-gradient(white, transparent 70%);
     background-image: radial-gradient(white, transparent 70%);
     padding: 2rem;
     border-radius: 3%;
@@ -360,10 +368,11 @@ section {
     -webkit-transform: rotate(8deg);
         -ms-transform: rotate(8deg);
             transform: rotate(8deg);
-            /* transform: skew(3deg, 2deg); */
     margin:1rem;
 }
 .idSideBar {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
@@ -399,20 +408,13 @@ section {
     padding:.5rem;
 }
 .badgeHole {
-    /* background-color: var(--lightIconColor); */
+    background-image: -o-radial-gradient(var(--lightIconColor), grey 90%);
     background-image: radial-gradient(var(--lightIconColor), grey 90%);
     width: 2rem;
     height: .5rem;
     border-radius: 30%;
     border: .5px solid gray;
 }
-
-/* #girlInOfficeBackground {
-    width: 25rem;
-    height: auto;
-    position:relative;
-    border: solid .5rem var(--darkIconColor);
-} */
 
 #TJ_headshot {
     width:12rem;
@@ -430,7 +432,6 @@ section {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    /* margin-top:3rem; */
 }
 #contactForm {
     display:-webkit-box;
@@ -442,8 +443,6 @@ section {
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    /* padding: 1rem;
-    padding-top: 2rem; */
 }
 #contactForm form {
     display:-webkit-box;
@@ -831,8 +830,8 @@ section {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding-top:var(--headerHeight);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(var(--lightIconColor)) );
     background-image: -o-linear-gradient(white, var(--lightIconColor) );
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(var(--lightIconColor)) );
     background-image: linear-gradient(white, var(--lightIconColor) );
     margin-left: var(--lhsSidebarWidth);
 }
@@ -1035,8 +1034,8 @@ footer {
     padding: .5rem 2rem;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    background-image:-webkit-gradient(linear, left top, left bottom, from(white), to(var(--lightIconColor)));
     background-image:-o-linear-gradient(white, var(--lightIconColor));
+    background-image:-webkit-gradient(linear, left top, left bottom, from(white), to(var(--lightIconColor)));
     background-image:linear-gradient(white, var(--lightIconColor));
 }
 
@@ -1161,7 +1160,8 @@ background: red;
         max-width: 90%; */
         margin: 0 auto;
         max-width: 100%;
-        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
         overflow-wrap: break-word;
     }
     .idSideBar {
@@ -1206,4 +1206,17 @@ background: red;
     .fa {
         padding: 12px;
     }
+}.example {
+    display: -ms-grid;
+    display: grid;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
 }
