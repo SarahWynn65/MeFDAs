@@ -92,7 +92,6 @@ h4 {
 }
 h6 {
     text-decoration: underline;
-    margin-bottom:1rem;
 }
 .siteContainer {
     width: 100vw;
@@ -582,7 +581,6 @@ section {
 .featureCardTitle1 {
     font-size: 1rem;
     line-height: 2rem;
-    /* color: var(--lighterIconColor); */
     text-align:center;
     text-decoration: underline;
     padding-top:1rem;
@@ -704,7 +702,7 @@ section {
     color:var(--lighterIconColor);
     height: 2.2rem;
     padding: .75rem;
-    line-height: 2rem;
+    line-height: 1.6rem;
 }
 .featureCardDetails5 {
     color:var(--lighterIconColor);
@@ -725,7 +723,6 @@ section {
 
 .featureCardTitle6 {
     color:var(--lighterIconColor);
-    /* height: 2.2rem; */
     padding: .75rem;
     padding-bottom:0;
     line-height: 2rem;
