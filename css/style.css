@@ -679,7 +679,7 @@ section {
 
 .featureCard5 {
     max-width:10rem;
-    height:14rem;
+    /* height:14rem; */
     padding:1rem;
     border-radius: 5%;
     margin:1rem;
@@ -700,7 +700,7 @@ section {
 
 .featureCardTitle5 {
     color:var(--lighterIconColor);
-    height: 2.2rem;
+    /* height: 2.2rem; */
     padding: .75rem;
     line-height: 1.6rem;
 }
