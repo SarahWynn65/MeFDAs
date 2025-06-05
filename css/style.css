@@ -182,6 +182,7 @@ header {
 
 .titleColor1 {
     color: var(--darkIconColor);
+    text-shadow: 3px 3px 3px var(--darkIconColor);
     font-size: 3rem;
 }
 .titleColor2 {
@@ -193,6 +194,10 @@ header {
     color:var(--lightIconColor);
     text-shadow: 2px 2px 2px var(--darkIconColor);
     font-size: 2rem;
+}
+.titleColor4 {
+    font-size:2rem;
+    text-shadow: 2px 2px 2px var(--darkIconColor);
 }
 header img {
     height:auto;
