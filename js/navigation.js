@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
+    // function incrementVisitorCount() {
+    //     let count = localStorage.getItem('visitorCount') || 0;
+    //     count = parseInt(count) + 1;
+    //     localStorage.setItem('visitorCount', count);
+        
+    //   }
+ 
+    //   incrementVisitorCount();
+
+
     // ***************************************************************** //
     // Main section display control from navbar
     // ***************************************************************** //
@@ -8,12 +18,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const homeButton = document.getElementById('homeButton');
     const servicesButton = document.getElementById('servicesButton');
     const faqsButton = document.getElementById('faqsButton');
+    const cvButton = document.getElementById('cvButton');
 
     // Sections related to navigation buttons
     const homeContainer = document.getElementById('homeContainer');
     const servicesContainer = document.getElementById('servicesContainer');
     const faqsContainer = document.getElementById('faqsContainer');
-    const allSectionNodes = [homeContainer, servicesContainer, faqsContainer];
+    const cvContainer = document.getElementById('cvContainer');
+    const allSectionNodes = [homeContainer, servicesContainer, faqsContainer, cvContainer];
 
     // Scrollable area between header and footer
     // ??? is this obsolete since it's only col2 which is now scrollable?
@@ -33,6 +45,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log('faqsButton clicked.');
         displaySection(faqsContainer);
     });
+
+    cvButton.addEventListener('click', ()=>{
+        console.log('cvButton clicked.');
+        displaySection(cvContainer);
+    })
 
     function displaySection(sectionNode){
         // remove all sections from display then display sectionNode

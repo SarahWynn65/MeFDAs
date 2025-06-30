@@ -18,43 +18,17 @@
 /* ********************************************** */
 
 html {
-    /* ============================== */
-    /* ===== green color scheme ===== */
-    /* ============================== */
-    /* --mainbackgroundColor:#1e676b;
-    --lightFontColor: #cadbda;
-    --darkFontColor: #0d403d; */
-    /* --background-image:url(../images/ChatGPT_MedicalImages.png) ; */
-
-    /* ============================== */
-    /* ==== favicon color scheme ==== */
-    /* ============================== */
-    /* --mainbackgroundColor: #003485;
-    --lightFontColor: #79b4fa;
-    --darkFontColor:#003485;
-    --background-image: url(../images/ChatGPT_greyMedicalBackground.png) ; */
-
-    /* ============================== */
-    /* ====== blue color scheme ===== */
-    /* ============================== */
-
-    /* --mainbackgroundColor:#253d49;
-    --lightFontColor: #71d2eb;
-    --darkFontColor:#17242f;
-    --background-image: url(../images/MeFDAs_headerImage.png); */
 
     /* ===== monochromatic color scheme ===== */
     
-    --lightFontColor: #cadbda;
     --darkFontColor: #5c5d5d;  /* RGB(92, 93, 93) */
-    --darkFontColorRGB: rgb(92, 93, 93, 1);
-    --background-image:url(../images/ChatGPT_greyMedicalBackground.png) ;
 
     /* ===== basic properties ===== */
     --mainbackgroundColor:white;
     --lighterIconColor: #c8e0fd;
     --lightIconColor:#79b4fa;
     --darkIconColor: #023382;
+    --whiteAnalogy: #f9fbff;
 
     font-family: "Mandali"; /* I like this one! */
     font-size: 20px;
@@ -298,8 +272,6 @@ section {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    /* margin: 2rem; */
-    /* line-height: 1.25; */
 }
 #introPanel p {
     margin-right:1rem;
@@ -496,6 +468,73 @@ section {
     margin-top: 1rem;
 }
 
+/* **************************** */
+/* ***** Resume / CV page ***** */
+/* **************************** */
+
+#cvContainer {
+    display: none;
+}
+#cvContainer.active {
+    display:flex;
+    flex-direction:column;
+    font-size: 16px;
+    padding:2rem;
+    padding-top:3rem;
+    background-color: var(--whiteAnalogy);
+    box-shadow: 4px 4px 8px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:4rem;
+}
+/* iframe {
+    width:100%;
+    height:150vh;
+} */
+#cvContainer li {
+    list-style: initial;
+}
+.cvH1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+    text-shadow: 2px 2px 4px gray;
+}
+.cvH2 {
+    font-size: 1rem;
+    text-align: center;
+}
+.cvUnderlined {
+    font-size: 1.3rem;
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px gray;
+}
+.cvSpaced {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 2;
+    text-shadow: 1px 1px 2px gray;
+}
+.cvSpaced span:last-child {
+    white-space: nowrap; /* Prevent line breaks in the date span */
+    margin-left:1rem;
+}
+.cvItalics {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+.cvBold {
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px gray;
+}
+
 /* ************************************************* */
 /* Column 1 - Left hand side column of feature cards */
 /* ************************************************* */
@@ -518,13 +557,6 @@ section {
     position: fixed;
     left:0;
 }
-
-/* scroll-container */
-/* #featureCardScrollWrapper {
-    height: 3000px;
-    overflow: hidden;
-    position: relative;
-} */
 
 .featureCardWrapper {
     display:-webkit-box;
@@ -684,7 +716,6 @@ section {
 
 .featureCard5 {
     max-width:10rem;
-    /* height:14rem; */
     padding:1rem;
     border-radius: 5%;
     margin:1rem;
@@ -705,7 +736,6 @@ section {
 
 .featureCardTitle5 {
     color:var(--lighterIconColor);
-    /* height: 2.2rem; */
     padding: .75rem;
     line-height: 1.6rem;
 }
@@ -743,7 +773,6 @@ section {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: linear-gradient(to right, rgba(255,0,0,0), var(--darkFontColorRGB));
 }
 .serviceCardWrapper {
     display: -webkit-inline-box;
@@ -1157,6 +1186,12 @@ background: red;
         text-align:left;
         font-size: small;
     }
+    .cvSpaced {
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items: flex-start;
+    }
+
     .idCard {
         /* margin: 0;
         max-width: 90%; */
