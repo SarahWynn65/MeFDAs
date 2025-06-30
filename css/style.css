@@ -5,13 +5,6 @@
 * Browsers: last 4 version
 */
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /* style sheet for MeFDAs May 2025 */
 /* ********************************************** */
 /* ****************** general ******************* */
@@ -476,21 +469,24 @@ section {
     display: none;
 }
 #cvContainer.active {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction:column;
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
     font-size: 16px;
     padding:2rem;
     padding-top:3rem;
     background-color: var(--whiteAnalogy);
-    box-shadow: 4px 4px 8px;
+    -webkit-box-shadow: 4px 4px 8px;
+            box-shadow: 4px 4px 8px;
     margin-left:auto;
     margin-right:auto;
     margin-top:4rem;
 }
-/* iframe {
-    width:100%;
-    height:150vh;
-} */
+
 #cvContainer li {
     list-style: initial;
 }
@@ -513,9 +509,16 @@ section {
     text-shadow: 1px 1px 2px gray;
 }
 .cvSpaced {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: 1.1rem;
     font-weight: 700;
     line-height: 2;
@@ -1187,9 +1190,16 @@ background: red;
         font-size: small;
     }
     .cvSpaced {
-        flex-direction: column;
-        justify-content:flex-start;
-        align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack:start;
+            -ms-flex-pack:start;
+                justify-content:flex-start;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
     }
 
     .idCard {
@@ -1205,13 +1215,9 @@ background: red;
         padding: 0;
     }
 
-    /* #swapWrapper1 {
-        bottom: 1.8rem;
-    } */
-
-    .col3 {
-        display: none;
-    }
+.col3 {
+    display: none;
+}
 .flexRow {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1227,6 +1233,8 @@ background: red;
 
     footer {
         position:static;
+        height:-webkit-fit-content;
+        height:-moz-fit-content;
         height:fit-content;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -1243,17 +1251,5 @@ background: red;
     .fa {
         padding: 12px;
     }
-}.example {
-    display: -ms-grid;
-    display: grid;
-    -webkit-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
-    background: -o-linear-gradient(top, white, black);
-    background: linear-gradient(to bottom, white, black);
 }
+ 
