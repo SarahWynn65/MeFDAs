@@ -72,7 +72,6 @@ li {
     list-style: initial; /* This has to be 'list-style' and not list-style-type so as to properly override the previous list-style styling */
 }
 
-
 body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -82,8 +81,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0;
-    overflow-y: scroll; 
-    /* ensures scrolling is allowed */
+    overflow-y: scroll; /* ensures scrolling is allowed */
 }
 /* ********************************************** */
 /* *************** header section *************** */
@@ -224,8 +222,9 @@ section {
     /* height: 250vh; */
 }
 
-
-/**** main section in center between sidebars - with changing content ****/
+/* *************************************************************** */
+/* main section in center between sidebars - with changing content */
+/* *************************************************************** */
 
 .pageContainer {
     display: none;
@@ -282,7 +281,6 @@ section {
         justify-content: space-around;
     -ms-flex-wrap:wrap;
         flex-wrap:wrap;
-    /* background-image: url(../images/ChatGPT\ Imageblurred_medical_personnel.png); */
     background-image: -o-radial-gradient(white, transparent 70%);
     background-image: radial-gradient(white, transparent 70%);
     padding: 2rem;
@@ -294,7 +292,6 @@ section {
     width:120px;
     height:120px;
     background-color:var(--darkIconColor);
-    /* border: solid 1rem var(--darkIconColor); */
     padding:1rem;
     border-radius: 10%;
     margin: 1rem;
@@ -487,9 +484,6 @@ section {
     margin-top:4rem;
 }
 
-#cvContainer li {
-    list-style: initial;
-}
 .cvH1 {
     font-size: 2.5rem;
     text-align: center;
@@ -500,6 +494,21 @@ section {
     font-size: 1rem;
     text-align: center;
 }
+.cvH2 span {
+    white-space: nowrap;
+}
+.cvBlueLine {
+    font-weight: 700;
+    text-align: center;
+    color: var(--lightIconColor);
+    margin:1rem;
+}
+.cvGreyLine {
+    text-align: center;
+    color: var(--lighterIconColor);
+    margin:1rem;
+}
+
 .cvUnderlined {
     font-size: 1.3rem;
     text-decoration: underline;
@@ -529,14 +538,39 @@ section {
     margin-left:1rem;
 }
 .cvItalics {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     font-style: italic;
 }
-.cvBold {
+.cvH3 {
     font-size: 1rem;
     font-weight: 700;
-    text-shadow: 1px 1px 2px gray;
+    text-align: center;
 }
+.cvH4 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+.cvColor1 {
+    color:var(--lightIconColor);
+}
+.cvTwoColumn {
+    display:-webkit-inline-box;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+#cvContainer li {
+    list-style: initial; /* This is needed to override the list-style: url(../images/bulletPoint_small.png); used for the main body */
+    list-style-type: "◊  ";
+}
+#cvContainer td:last-child {
+    text-align:right;
+}
+
+
 
 /* ************************************************* */
 /* Column 1 - Left hand side column of feature cards */
@@ -644,7 +678,6 @@ section {
     margin-top: 2rem;
     margin-bottom:2rem;
     background-color: white;
-    /* transform: rotate(-2deg); */
 }
 .featureCardTitle2 {
     color:var(--darkIconColor);
@@ -927,11 +960,7 @@ section {
 }
 .dropdownContent p {
     font-size: 1rem;
-    /* padding: 1rem; */
     padding-bottom: 2rem;
-    /* width: 80%; */
-    /* margin-left:auto; */
-    /* margin-right: auto; */
 }
 .dropdownContent.active {
     display: -webkit-box;
@@ -942,10 +971,8 @@ section {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 80%;
-    /* padding: 1rem; */
     margin-left:auto;
     margin-right:auto;
-    /* max-height:300px;  */ /* Adjust depending on content */
     opacity: 1;
 }
 h2 {
@@ -1136,7 +1163,6 @@ background: red;
 /* Adjustments for cellphone use */
 /* ***************************** */
 
-/* @media only screen and (max-width: 489px) { */
     @media only screen and (max-width: 845px) {
     html {
         font-size:smaller;
@@ -1201,10 +1227,14 @@ background: red;
             -ms-flex-align: start;
                 align-items: flex-start;
     }
+    .cvBlueLine {
+        font-size:11px;
+    }
+    .cvGreyLine {
+        font-size:11px;
+    }
 
     .idCard {
-        /* margin: 0;
-        max-width: 90%; */
         margin: 0 auto;
         max-width: 100%;
         -webkit-box-sizing: border-box;
@@ -1215,21 +1245,21 @@ background: red;
         padding: 0;
     }
 
-.col3 {
-    display: none;
-}
-.flexRow {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-}
+    .col3 {
+        display: none;
+    }
+    .flexRow {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
 
-.featureCard6 {
-    text-align: center;
-    margin-left:auto;
-    margin-right:auto;
-}
+    .featureCard6 {
+        text-align: center;
+        margin-left:auto;
+        margin-right:auto;
+    }
 
     footer {
         position:static;
@@ -1249,7 +1279,7 @@ background: red;
         padding-bottom:.5rem;
     }
     .fa {
-        padding: 12px;
+        padding: 18px 12px 6px 12px;
     }
-}
+} /* End of @media adjustments */
  
