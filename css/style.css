@@ -1144,6 +1144,7 @@ background: red;
     color:white;
 }
   
+/* Adjustments for iPad */
 
 @media only screen and (max-width: 1400px) {
     #contactUs {
@@ -1165,7 +1166,7 @@ background: red;
 
     @media only screen and (max-width: 845px) {
     html {
-        font-size:smaller;
+        font-size: 16px;
     }
     header {
         -webkit-box-orient: vertical;
@@ -1214,6 +1215,9 @@ background: red;
     .calendarLinkWrapper {
         text-align:left;
         font-size: small;
+    }
+    .cvH4 {
+        font-size: 16px;
     }
     .cvSpaced {
         -webkit-box-orient: vertical;
