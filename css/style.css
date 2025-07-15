@@ -683,10 +683,10 @@ section {
 }
 
 .featureCardTitle1 {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 2rem;
     text-align:center;
-    text-decoration: underline;
+    text-decoration: none;
     padding-top:1rem;
 }
 .featureCard2 {
@@ -949,16 +949,18 @@ section {
 
 #faqsContainer button {
     width: 80%;
+    padding: 1rem;
+    border-radius: 1rem;
     margin-right: auto;
     margin-left: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    padding: 1rem;
     -webkit-box-shadow: 2px 2px 2px gray;
             box-shadow: 2px 2px 2px gray;
     background-color: var(--darkIconColor);
     color: var(--lighterIconColor);
     font-size:1rem;
+    cursor: pointer;
 }
 
 /* FAQ dropdown button & content display */
@@ -974,7 +976,6 @@ section {
     width: 100%; 
     padding: 16px;
     border: none;
-    cursor: pointer;
 }
 
 .dropdownContent {
