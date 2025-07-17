@@ -1,11 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
-/* style sheet for MeFDAs May 2025 */
+/* style sheet for MeFDAs July 2025 */
 /* ********************************************** */
 /* ****************** general ******************* */
 /* ********************************************** */
@@ -60,7 +53,6 @@ h4 {
     padding-bottom:1rem;
 }
 h6 {
-    /* text-decoration: underline; */
     font-weight: 700;
     text-shadow: 3px 3px 3px var(--lighterIconColor);
 }
