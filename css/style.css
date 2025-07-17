@@ -60,7 +60,9 @@ h4 {
     padding-bottom:1rem;
 }
 h6 {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    font-weight: 700;
+    text-shadow: 3px 3px 3px var(--lighterIconColor);
 }
 .siteContainer {
     width: 100vw;
@@ -228,6 +230,7 @@ section {
     margin-left:auto;
     margin-bottom:4rem;
 }
+
 
 #homeContainer {
     /* display:flex is added if this page is .active; don't add it here */

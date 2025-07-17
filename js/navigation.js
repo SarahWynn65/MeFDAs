@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         displaySection(homeContainer);
     });
 
+    
     servicesButton.addEventListener('click', ()=>{
         console.log('servicesButton clicked.');
         displaySection(servicesContainer);
