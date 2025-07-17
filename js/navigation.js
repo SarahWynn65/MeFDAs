@@ -1,15 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
-    // function incrementVisitorCount() {
-    //     let count = localStorage.getItem('visitorCount') || 0;
-    //     count = parseInt(count) + 1;
-    //     localStorage.setItem('visitorCount', count);
-        
-    //   }
- 
-    //   incrementVisitorCount();
-
-
     // ***************************************************************** //
     // Main section display control from navbar
     // ***************************************************************** //
@@ -17,15 +7,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Navigation buttons
     const homeButton = document.getElementById('homeButton');
     const servicesButton = document.getElementById('servicesButton');
+    const whoWeAreButton = document.getElementById('whoWeAreButton');
     const faqsButton = document.getElementById('faqsButton');
     const cvButton = document.getElementById('cvButton');
 
     // Sections related to navigation buttons
     const homeContainer = document.getElementById('homeContainer');
     const servicesContainer = document.getElementById('servicesContainer');
+    const whoWeAreContainer = document.getElementById('whoWeAreContainer');
     const faqsContainer = document.getElementById('faqsContainer');
     const cvContainer = document.getElementById('cvContainer');
-    const allSectionNodes = [homeContainer, servicesContainer, faqsContainer, cvContainer];
+    const allSectionNodes = [homeContainer, servicesContainer, whoWeAreContainer, faqsContainer, cvContainer];
 
     // Scrollable area between header and footer
     // ??? is this obsolete since it's only col2 which is now scrollable?
@@ -39,6 +31,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     servicesButton.addEventListener('click', ()=>{
         console.log('servicesButton clicked.');
         displaySection(servicesContainer);
+    });
+
+    whoWeAreButton.addEventListener('click', ()=>{
+        console.log('whoWeAreButton clicked.');
+        displaySection(whoWeAreContainer);
     });
 
     faqsButton.addEventListener('click', ()=>{
@@ -105,6 +102,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     statNodes.forEach(node => {
         observer.observe(node);
     });
+
+    // ****************************************************** //
+    // WhoWeAre Page 
+    // ****************************************************** //
+
+    function getRandomInteger(min, max) {
+        min = Math.ceil(min); // Ensures min is an integer
+        max = Math.floor(max); // Ensures max is an integer
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
     
     // ***************************************************************** //
     // FAQ Page: to show or hide an FAQ in response to user 'click'
@@ -116,6 +123,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const dropdown3 = document.getElementById('dropdown3');
     const dropdown4 = document.getElementById('dropdown4');
     const dropdown5 = document.getElementById('dropdown5');
+
 
     // Dropdown content related to dropdown buttons
     const dropdown1Content = document.getElementById('dropdown1Content');
@@ -150,11 +158,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 
-    // function toggleDropdown(node){
-    //     console.log('node is: ', node);
-    //     node.classList.toggle("active");
-    // }
-
     function toggleDropdown(node) {
         if (node.classList.contains('active')) {
             // Collapse
@@ -171,9 +174,60 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    // ****************************************************** //
-    // The following animates title changes on Services page  //
-    // ****************************************************** //
+    // *********************************************** //
+    // **************** Services page **************** //
+    // *********************************************** //
+
+    const servicesDropdown1 = document.getElementById('servicesDropdown1');
+    const servicesDropdown2 = document.getElementById('servicesDropdown2');
+    const servicesDropdown3 = document.getElementById('servicesDropdown3');
+    const servicesDropdown4 = document.getElementById('servicesDropdown4');
+    const servicesDropdown5 = document.getElementById('servicesDropdown5');
+    const servicesDropdown6 = document.getElementById('servicesDropdown6');
+    const servicesDropdown7 = document.getElementById('servicesDropdown7');
+    const servicesDropdown8 = document.getElementById('servicesDropdown8');
+
+    const servicesDropdown1Content = document.getElementById('servicesDropdown1Content');
+    const servicesDropdown2Content = document.getElementById('servicesDropdown2Content');
+    const servicesDropdown3Content = document.getElementById('servicesDropdown3Content');
+    const servicesDropdown4Content = document.getElementById('servicesDropdown4Content');
+    const servicesDropdown5Content = document.getElementById('servicesDropdown5Content');
+    const servicesDropdown6Content = document.getElementById('servicesDropdown6Content');
+    const servicesDropdown7Content = document.getElementById('servicesDropdown7Content');
+    const servicesDropdown8Content = document.getElementById('servicesDropdown8Content');
+
+    servicesDropdown1.addEventListener('click', () => {
+        console.log("servicesDropdown1 eventListener triggered." );
+        toggleDropdown(servicesDropdown1Content);
+    }); // end of servicesDropdown1 eventListener
+    servicesDropdown2.addEventListener('click', () => {
+        console.log("servicesDropdown2 eventListener triggered." );
+        toggleDropdown(servicesDropdown2Content);
+    }) // end of servicesDropdown2 eventListener
+    servicesDropdown3.addEventListener('click', () => {
+        console.log("servicesDropdown3 eventListener triggered." );
+        toggleDropdown(servicesDropdown3Content);
+    }) // end of servicesDropdown3 eventListener
+    servicesDropdown4.addEventListener('click', () => {
+        console.log("servicesDropdown4 eventListener triggered." );
+        toggleDropdown(servicesDropdown4Content);
+    }) // end of servicesDropdown4 eventListener
+    servicesDropdown5.addEventListener('click', () => {
+        console.log("servicesDropdown5 eventListener triggered." );
+        toggleDropdown(servicesDropdown5Content);
+    }) // end of servicesDropdown5 eventListener
+    servicesDropdown6.addEventListener('click', () => {
+        console.log("servicesDropdown6 eventListener triggered." );
+        toggleDropdown(servicesDropdown6Content);
+    }) // end of servicesDropdown6 eventListener
+    servicesDropdown7.addEventListener('click', () => {
+        console.log("servicesDropdown7 eventListener triggered." );
+        toggleDropdown(servicesDropdown7Content);
+    }) // end of servicesDropdown7 eventListener
+    servicesDropdown8.addEventListener('click', () => {
+        console.log("servicesDropdown8 eventListener triggered." );
+        toggleDropdown(servicesDropdown8Content);
+    }) // end of servicesDropdown8 eventListener
 
     const swap1 = document.querySelector('.swap1');
     const swap2 = document.querySelector('.swap2');
