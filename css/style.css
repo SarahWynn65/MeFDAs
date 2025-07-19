@@ -54,7 +54,7 @@ h4 {
 }
 h6 {
     font-weight: 700;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 3px 3px 3px var(--lighterIconColor);
 }
 .siteContainer {
     width: 100vw;
@@ -792,6 +792,7 @@ section {
     color:var(--lighterIconColor);
     padding: .75rem;
     line-height: 1.6rem;
+    text-shadow: 3px 3px 3px black;
 }
 .featureCardDetails5 {
     color:var(--lighterIconColor);
