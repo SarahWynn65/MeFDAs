@@ -1,6 +1,13 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* style sheet for MeFDAs July 2025 */
 /* ********************************************** */
-/* ****************** general ******************* */
+/* ****************** General ******************* */
 /* ********************************************** */
 
 html {
@@ -77,6 +84,10 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(var(--lightIconColor)) );
+    
+    background-image: -o-linear-gradient(white, var(--lightIconColor) );
+    
     background-image: linear-gradient(white, var(--lightIconColor) );
     margin: 0;
     overflow-y: scroll; /* ensures scrolling is allowed */
@@ -87,15 +98,23 @@ body {
 
 
 header {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     /* justify-content: space-around; */
     background-color: var(--mainbackgroundColor);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, white), to(var(--lightIconColor)) );
+    background-image: -o-linear-gradient(white 20%, var(--lightIconColor) );
     background-image: linear-gradient(white 20%, var(--lightIconColor) );
 
     position:fixed;
     top:0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding-top: 1rem;
     padding-bottom: 1rem;
 padding-left: 5%;
@@ -108,9 +127,16 @@ padding-right: 5%;
     z-index: 100;
 }
 #companyBadge {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-bottom: 1rem;
 }
 #companyTitle {
@@ -157,10 +183,19 @@ header img {
 
 nav {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
 
 }
 nav a {
@@ -299,20 +334,34 @@ section {
 }
 
 .idCard {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    box-shadow: 10px 10px 10px grey;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-shadow: 10px 10px 10px grey;
+            box-shadow: 10px 10px 10px grey;
     background-color: white;
     border: solid gray 2px;
-    transform: rotate(8deg);
+    -webkit-transform: rotate(8deg);
+        -ms-transform: rotate(8deg);
+            transform: rotate(8deg);
     margin:1rem;
     width: 19rem;
     border-radius: 20px;
 }
 .idSideBar {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
     width: 3rem;
     text-align: center;
     background-color: var(--darkIconColor);
@@ -359,15 +408,25 @@ section {
     margin:1rem;
 }
 
-#contactUs {
+/* #contactUs {
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+} */
+#contactUs {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* justify-content: space-around; */
 }
 #contactUs p:first-child {
     margin-bottom:1rem;
 }
-#contactForm {
+/* #contactForm {
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
@@ -377,7 +436,19 @@ section {
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+} */
+#contactForm {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
+
 #contactForm form {
     display:-webkit-box;
     display:-ms-flexbox;
@@ -401,11 +472,12 @@ section {
     min-height: 10rem;
     resize:vertical;
 }
-#contactForm div {
+/* #contactForm div {
     margin-top:1.5rem;
-}
+} */
 
 .calendarLinkWrapper {
+    padding-top:6rem;
     padding-bottom: 2rem;
     text-align: center;
 }
@@ -575,14 +647,24 @@ section {
 
 #whoWeAreContainer {
     /* display: flex; */
-    flex-direction: column;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .featureCardWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 #featureCardScrollWrapper:hover #featureCardWrapper {
@@ -745,41 +827,41 @@ section {
     z-index: 50;
 }
 
-#whoAreWe1 {transform:rotate(2deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe1:hover {transform:rotate(-3deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe1 {-webkit-transform:rotate(2deg);-ms-transform:rotate(2deg);transform:rotate(2deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe1:hover {-webkit-transform:rotate(-3deg) scale(1.1);-ms-transform:rotate(-3deg) scale(1.1);transform:rotate(-3deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe2 {transform:rotate(1deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe2:hover {transform:rotate(-4deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe2 {-webkit-transform:rotate(1deg);-ms-transform:rotate(1deg);transform:rotate(1deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe2:hover {-webkit-transform:rotate(-4deg) scale(1.1);-ms-transform:rotate(-4deg) scale(1.1);transform:rotate(-4deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe3 {transform:rotate(-1deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe3:hover {transform:rotate(2deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe3 {-webkit-transform:rotate(-1deg);-ms-transform:rotate(-1deg);transform:rotate(-1deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe3:hover {-webkit-transform:rotate(2deg) scale(1.1);-ms-transform:rotate(2deg) scale(1.1);transform:rotate(2deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe4 {transform:rotate(4deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe4:hover {transform:rotate(2deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe4 {-webkit-transform:rotate(4deg);-ms-transform:rotate(4deg);transform:rotate(4deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe4:hover {-webkit-transform:rotate(2deg) scale(1.1);-ms-transform:rotate(2deg) scale(1.1);transform:rotate(2deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe5 {transform:rotate(-5deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe5:hover {transform:rotate(-1deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe5 {-webkit-transform:rotate(-5deg);-ms-transform:rotate(-5deg);transform:rotate(-5deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe5:hover {-webkit-transform:rotate(-1deg) scale(1.1);-ms-transform:rotate(-1deg) scale(1.1);transform:rotate(-1deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe6 {transform:rotate(-3deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe6:hover {transform:rotate(-2deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe6 {-webkit-transform:rotate(-3deg);-ms-transform:rotate(-3deg);transform:rotate(-3deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe6:hover {-webkit-transform:rotate(-2deg) scale(1.1);-ms-transform:rotate(-2deg) scale(1.1);transform:rotate(-2deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe7 {transform:rotate(3deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe7:hover {transform:rotate(-1deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe7 {-webkit-transform:rotate(3deg);-ms-transform:rotate(3deg);transform:rotate(3deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe7:hover {-webkit-transform:rotate(-1deg) scale(1.1);-ms-transform:rotate(-1deg) scale(1.1);transform:rotate(-1deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe8 {transform:rotate(-4deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe8:hover {transform:rotate(2deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe8 {-webkit-transform:rotate(-4deg);-ms-transform:rotate(-4deg);transform:rotate(-4deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe8:hover {-webkit-transform:rotate(2deg) scale(1.1);-ms-transform:rotate(2deg) scale(1.1);transform:rotate(2deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe9 {transform:rotate(-1deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe9:hover {transform:rotate(-2deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe9 {-webkit-transform:rotate(-1deg);-ms-transform:rotate(-1deg);transform:rotate(-1deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe9:hover {-webkit-transform:rotate(-2deg) scale(1.1);-ms-transform:rotate(-2deg) scale(1.1);transform:rotate(-2deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe10 {transform:rotate(3deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe10:hover {transform:rotate(-4deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe10 {-webkit-transform:rotate(3deg);-ms-transform:rotate(3deg);transform:rotate(3deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe10:hover {-webkit-transform:rotate(-4deg) scale(1.1);-ms-transform:rotate(-4deg) scale(1.1);transform:rotate(-4deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe11 {transform:rotate(-1deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe11:hover {transform:rotate(2deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe11 {-webkit-transform:rotate(-1deg);-ms-transform:rotate(-1deg);transform:rotate(-1deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe11:hover {-webkit-transform:rotate(2deg) scale(1.1);-ms-transform:rotate(2deg) scale(1.1);transform:rotate(2deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
-#whoAreWe12 {transform:rotate(4deg); transition: transform 1.3s, box-shadow 1.3s; z-index:25;}
-#whoAreWe12:hover {transform:rotate(-2deg) scale(1.1); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
+#whoAreWe12 {-webkit-transform:rotate(4deg);-ms-transform:rotate(4deg);transform:rotate(4deg); -webkit-transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; transition: -webkit-transform 1.3s, -webkit-box-shadow 1.3s; -o-transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s; transition: transform 1.3s, box-shadow 1.3s, -webkit-transform 1.3s, -webkit-box-shadow 1.3s; z-index:25;}
+#whoAreWe12:hover {-webkit-transform:rotate(-2deg) scale(1.1);-ms-transform:rotate(-2deg) scale(1.1);transform:rotate(-2deg) scale(1.1); -webkit-box-shadow: 0 10px 30px rgba(0,0,0,3); box-shadow: 0 10px 30px rgba(0,0,0,3); z-index:75;}
 
 .featureCard5:hover {
     -webkit-transform: scale(1.1);
@@ -1186,6 +1268,13 @@ footer {
 }
 
 @media only screen and (max-width: 1185px){
+    #contactForm {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+
     #servicesDropdown6, #servicesDropdown7 {
         min-height: 116px; /* Set both to this height so they change at same rate. */
     }
@@ -1234,9 +1323,7 @@ footer {
             -ms-flex-direction: column;
                 flex-direction: column;
     }
-    /* .col1 {
-        display:none;
-    } */
+
     .col2 {
         padding-top:10rem;
         margin-left: 1rem;
@@ -1244,8 +1331,8 @@ footer {
         width: calc(100vw - 2rem);
     }
     .calendarLinkWrapper {
-        text-align:left;
         font-size: small;
+        padding-top: 1rem;
     }
     .cvH4 {
         font-size: 16px;
