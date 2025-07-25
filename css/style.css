@@ -24,8 +24,8 @@ html {
     --whiteAnalogy: #f9fbff;
 
     font-family: "Mandali"; /* I like this one! */
-    /* font-size: 20px; */
-    font-size: 26px;
+    font-size: 20px;
+    /* font-size: 26px; */
     line-height:2;
     background-color: var(--mainbackgroundColor);
     --headerHeight: 12rem;
@@ -959,6 +959,10 @@ section {
 }
 #serviceCard6 .serviceCardDetails {
     margin-left: 10%;
+}
+.boldP {
+    font-weight: 700;
+    font-size: 22px;
 }
 
 /* Classes to facilitate transformation between two titles */
