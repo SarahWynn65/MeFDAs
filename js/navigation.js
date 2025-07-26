@@ -187,6 +187,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const servicesDropdown6 = document.getElementById('servicesDropdown6');
     const servicesDropdown7 = document.getElementById('servicesDropdown7');
     const servicesDropdown8 = document.getElementById('servicesDropdown8');
+    const servicesDropdown9 = document.getElementById('servicesDropdown9');
 
     const servicesDropdown1Content = document.getElementById('servicesDropdown1Content');
     const servicesDropdown2Content = document.getElementById('servicesDropdown2Content');
@@ -196,6 +197,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const servicesDropdown6Content = document.getElementById('servicesDropdown6Content');
     const servicesDropdown7Content = document.getElementById('servicesDropdown7Content');
     const servicesDropdown8Content = document.getElementById('servicesDropdown8Content');
+    const servicesDropdown9Content = document.getElementById('servicesDropdown9Content');
 
     servicesDropdown1.addEventListener('click', () => {
         console.log("servicesDropdown1 eventListener triggered." );
@@ -229,6 +231,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         console.log("servicesDropdown8 eventListener triggered." );
         toggleDropdown(servicesDropdown8Content);
     }) // end of servicesDropdown8 eventListener
+    servicesDropdown9.addEventListener('click', () => {
+        console.log("servicesDropdown9 eventListener triggered." );
+        toggleDropdown(servicesDropdown9Content);
+    }) // end of servicesDropdown9 eventListener
 
     const swap1 = document.querySelector('.swap1');
     const swap2 = document.querySelector('.swap2');
