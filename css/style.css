@@ -115,10 +115,10 @@ header {
     top:0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-padding-left: 5%;
-padding-right: 5%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 5%;
+    padding-right: var(--rhsSidebarWidth);
     /* padding-right: 14rem; */
     /* padding-right: var(--rhsSidebarWidth); */
     /* padding-left: 14rem; */
@@ -160,12 +160,12 @@ padding-right: 5%;
 .titleColor1 {
     color: var(--darkIconColor);
     text-shadow: 3px 3px 3px var(--darkIconColor);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 .titleColor2 {
     color:var(--lightIconColor);
     text-shadow: 3px 3px 3px var(--darkIconColor);
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .titleColor3 {
     color:var(--lightIconColor);
@@ -684,6 +684,7 @@ section {
     max-width: 70vw;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
 }
 
 .featureCardWrapper {
