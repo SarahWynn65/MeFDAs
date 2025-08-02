@@ -5,7 +5,8 @@
 * Browsers: last 4 version
 */
 
-/* style sheet for MeFDAs July 2025 */
+
+/* style sheet for MeFDAs August 2025 */
 /* ********************************************** */
 /* ****************** General ******************* */
 /* ********************************************** */
@@ -186,16 +187,16 @@ nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
 }
 nav a {
@@ -210,7 +211,7 @@ nav a {
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
-
+    line-height: 1.5;
 }
 #homeButton:hover, #servicesButton:hover, #whoWeAreButton:hover, #faqsButton:hover {
     color: var(--whiteAnalogy);
@@ -665,22 +666,13 @@ section {
     margin-bottom:var(--footerHeight);
 }
 .whoWeAreWrap {
-    /* width: 20vw; */
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: 17rem;
+    height: 16.5rem;
     margin: 1rem;
-    /* min-width:250px; */
     min-width:12.5rem;
-    /* max-width:350px; */
     max-width:15.25rem;
 }
 #whoWeAreContainer p {
-    /* width: 80%;
-    margin-right: 10%;
-    margin-left: 10%; */
     margin-bottom:2%;
-
     max-width: 70vw;
     margin-left: auto;
     margin-right: auto;
@@ -1354,10 +1346,10 @@ footer {
         font-size: 16px;
     }
     header {
-        -webkit-box-orient: vertical;
+        -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+            -ms-flex-direction: row;
+                flex-direction: row;
         padding:15px;
     }
     #companyBadge {
@@ -1472,5 +1464,19 @@ footer {
     .fa {
         padding: 18px 12px 6px 12px;
     }
-} /* End of @media adjustments */
+} 
+@media only screen and (max-width: 550px) {
+    header {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    nav {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+    }
+}
+/* End of @media adjustments */
  
