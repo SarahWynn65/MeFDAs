@@ -118,7 +118,7 @@ header {
     padding-top: .5rem;
     padding-bottom: .5rem;
     padding-left: 5%;
-    padding-right: var(--rhsSidebarWidth);
+    padding-right: 5%;
     /* padding-right: 14rem; */
     /* padding-right: var(--rhsSidebarWidth); */
     /* padding-left: 14rem; */
@@ -668,7 +668,7 @@ section {
     /* width: 20vw; */
     height: -webkit-fit-content;
     height: -moz-fit-content;
-    height: fit-content;
+    height: 17rem;
     margin: 1rem;
     /* min-width:250px; */
     min-width:12.5rem;
@@ -881,6 +881,7 @@ section {
 .featureCardTitle7 {
     color:var(--darkIconColor);
     padding: .5rem;
+    text-align:center;
 }
 .featureCardDetails7 {
     color:var(--darkIconColor);
