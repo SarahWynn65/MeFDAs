@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const servicesButton = document.getElementById('servicesButton');
     const whoWeAreButton = document.getElementById('whoWeAreButton');
     const faqsButton = document.getElementById('faqsButton');
-    const cvButton = document.getElementById('cvButton');
+    // const cvButton = document.getElementById('cvButton');
 
     // Sections related to navigation buttons
     const homeContainer = document.getElementById('homeContainer');
@@ -44,10 +44,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
         displaySection(faqsContainer);
     });
 
-    cvButton.addEventListener('click', ()=>{
-        console.log('cvButton clicked.');
-        displaySection(cvContainer);
-    })
+    // Do not delete
+    // cvButton.addEventListener('click', ()=>{
+    //     console.log('cvButton clicked.');
+    //     displaySection(cvContainer);
+    // })
 
     function displaySection(sectionNode){
         // remove all sections from display then display sectionNode
